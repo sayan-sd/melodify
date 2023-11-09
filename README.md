@@ -6,9 +6,16 @@ Welcome to Melodify, your ultimate music destination! Melodify is a demo project
 - **Create Playlists**: Personalize your music experience by building and managing your own playlists.(not added yet)
 - **Smooth Playback**: Enjoy high-quality audio streaming with our user-friendly interface.
 - **Responsive Design**: Access Melodify on any device, whether it's a desktop computer, tablet, or smartphone, for a consistent and enjoyable experience.
-
+- **Radio**: (Currently not functional)
 ## Demo
-You can check out the live demo of Melodify [here](#insert-demo-url).
+You can check out the live demo of Melodify [here](https://sayan-sd.github.io/melodify/).
+
+## Left Side Menu
+- **Recommended**: (Currently not functional)
+- **Playlists**: (Currently not functional)
+
+## Artist Section
+- **Arijit Singh** and **Anuv Jain** pages are functional.
 
 ## Disclaimer
 This project, Melodify, is built solely for demonstration and educational purposes. It is not intended for commercial or production use. We have included copyrighted songs and materials in this project to showcase its capabilities, but we do not endorse or support any unauthorized distribution or use of copyrighted content.
