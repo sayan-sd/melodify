@@ -1,4 +1,4 @@
-![Melodify Website Preview](./mockup.png)
+![mockup](https://github.com/sayan-sd/melodify/assets/147993392/b50d4b3c-ef3f-4251-9e8e-965c83c46a91)
 
 # Melodify
 Welcome to Melodify, your ultimate music destination! Melodify is a demo project showcasing the power of HTML5, CSS3, and JavaScript to provide a seamless music experience. Please note that this project is for demonstration purposes only and is not intended for production use due to the presence of copyrighted songs.
