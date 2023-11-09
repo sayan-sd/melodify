@@ -1,3 +1,5 @@
+![Melodify Website Preview](./mockup.png)
+
 # Melodify
 Welcome to Melodify, your ultimate music destination! Melodify is a demo project showcasing the power of HTML5, CSS3, and JavaScript to provide a seamless music experience. Please note that this project is for demonstration purposes only and is not intended for production use due to the presence of copyrighted songs.
 
