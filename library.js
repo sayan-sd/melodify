@@ -526,10 +526,15 @@ heroSectionTrackPlay.addEventListener("click", () => {
 //side bar section
 let sidebar_active = document.getElementById("get-sidebar");
 let left_sidebar = document.getElementsByClassName("left-side-bar")[0];
-
+let right_side_space = document.getElementsByClassName(
+    "right-side-home-interface"
+)[0];
 sidebar_active.addEventListener("click", () => {
     // left_sidebar.style.transform = "unset";
     left_sidebar.classList.toggle("left-side-bar-active");
+});
+right_side_space.addEventListener("click", () => {
+    left_sidebar.classList.add("left-side-bar-active");
 });
 
 //nav menu

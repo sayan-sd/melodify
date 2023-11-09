@@ -3,7 +3,7 @@
         position: absolute;
         z-index: 999;
         width: 40%;
-        transition: 1s linear;
+        transition: 0.5s linear;
         background: #0b1320;
     }
     .left-side-bar-active {
@@ -38,13 +38,13 @@
     }
     .audio-controler .wave {
         position: absolute;
-        left: 36%;
+        left: 32%;
         top: -50px;
     }
     .audio-controler img {
         position: absolute;
         top: -50px;
-        left: 41%;
+        left: 38%;
     }
     .audio-controler .wave::before {
         content: "";
@@ -62,7 +62,7 @@
     .audio-controler #title {
         position: absolute;
         top: -50px;
-        left: 49%;
+        left: 46%;
     }
     .audio-controler .main-controler {
         width: 100%;
@@ -107,7 +107,7 @@
         background: #111727;
         box-shadow: black 0px 1px 4px;
         border-radius: 10px;
-        transition: 0.5s linear;
+        transition: 0.3s linear;
     }
     .right-side-home-interface_nav_ul {
         transform: translateX(-120%);
@@ -118,13 +118,13 @@
 
     .audio-controler .wave {
         position: absolute;
-        left: 30%;
+        left: 28%;
         top: -50px;
     }
     .audio-controler img {
         position: absolute;
         top: -50px;
-        left: 36%;
+        left: 35%;
     }
     .audio-controler .wave::before {
         content: "";
@@ -142,11 +142,13 @@
     .audio-controler #title {
         position: absolute;
         top: -50px;
-        left: 44.5%;
+        left: 43%;
     }
     .right-side-home-interface::before {
         top: 150px;
-        /* width: 100%; */
+        width: 200%;
+        right: -13%;
+        top: 10%;
     }
     .audio-controler .main-controler {
         margin: 0;
@@ -160,13 +162,13 @@
 @media (max-width: 400px) {
     .audio-controler .wave {
         position: absolute;
-        left: 22%;
+        left: 20%;
         top: -50px;
     }
     .audio-controler img {
         position: absolute;
         top: -50px;
-        left: 30%;
+        left: 28%;
     }
     .audio-controler .wave::before {
         content: "";
@@ -217,4 +219,10 @@
         top: -50px;
         left: 38%;
     }
+    /* .right-side-home-interface::before {
+        top: 150px;
+        width: 200%;
+        right: -13%;
+        top: 10%;
+    } */
 }
