@@ -652,6 +652,9 @@
     outline: none;
     font-size: 20px;
 }
+.audio-controler .main-controler i, .controler-icon-pack1 i#shuffle {
+    margin-right: 7px;
+}
 .audio-controler .main-controler .time-controler .audio-controler-range p{
     letter-spacing: 1.5px;
 }
@@ -790,3 +793,4 @@
     z-index: 999;
     opacity: 0;
 }
+

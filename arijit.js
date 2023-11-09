@@ -128,6 +128,113 @@ const songs = [
         poster: "./Image/arijit/15.jpg",
     },
 ];
+
+//left side favorite song list
+const parentElement = document.querySelector(".left-side-songs-list");
+for (let i = 1; i <= 10; i++) {
+    const li = document.createElement("li");
+    li.className = "song-item";
+
+    const p = document.createElement("p");
+    p.textContent = i.toString().padStart(2, "0");
+
+    const img = document.createElement("img");
+    img.src = "";
+    img.setAttribute("loading", "lazy");
+
+    const h4 = document.createElement("h4");
+    h4.className = "song-description";
+
+    const span = document.createElement("span");
+    span.textContent = "Audio Artist";
+
+    const playIcon = document.createElement("i");
+    playIcon.className = "bi bi-play-circle-fill playlistPlay";
+    playIcon.id = i.toString();
+
+    h4.appendChild(span);
+    li.appendChild(p);
+    li.appendChild(img);
+    li.appendChild(h4);
+    li.appendChild(playIcon);
+
+    parentElement.appendChild(li);
+}
+
+//home section popular song list dynamic code
+const popularSongList = document.querySelector('.popular-song-ul');
+// Define the number of songs you want to generate
+const numberOfSongs = 25;
+
+for (let i = 11; i <= numberOfSongs; i++) {
+    const li = document.createElement('li');
+    li.className = 'song-item';
+
+    const songPoster = document.createElement('div');
+    songPoster.className = 'song-poster';
+
+    const img = document.createElement('img');
+    img.src = '';
+    img.setAttribute('loading', 'lazy');
+
+    const playIcon = document.createElement('i');
+    playIcon.className = 'bi bi-play-circle-fill playlistPlay';
+    playIcon.id = i.toString();
+
+    songPoster.appendChild(img);
+    songPoster.appendChild(playIcon);
+
+    const h4 = document.createElement('h4');
+    h4.textContent = 'Audio Title';
+
+    li.appendChild(songPoster);
+    li.appendChild(h4);
+
+    popularSongList.appendChild(li);
+}
+
+
+//popular artist dynamic list
+artistData = [
+    { link: "./artist_arijitShing.html", src: "./Image/arijit.jpg" },
+    { link: "./", src: "./Image/anuv.png"},
+    { src: "./Image/alan.jpeg" },
+    { src: "./Image/katy.jpg" },
+    { src: "./Image/Charlie.webp" },
+    { src: "./Image/anupam.jpg" },
+    { src: "./Image/vishal.jpg" },
+    { src: "./Image/taylor.jpg" },
+    { src: "./Image/papon.jpg" },
+    { src: "./Image/ed.jpg" },
+    { src: "./Image/hardy.jpg" },
+    { src: "./Image/atif.webp" },
+    { src: "./Image/neha.jpg" },
+    { src: "./Image/snake.jpg" },
+];
+// Get the parent element where you want to insert the list
+const popularArtistList = document.querySelector(".popular-artist-ul");
+artistData.forEach((artist, index) => {
+    const li = document.createElement('li');
+
+    if (artist.link) {
+        const a = document.createElement('a');
+        a.href = artist.link;
+        const img = document.createElement('img');
+        img.src = artist.src;
+        img.setAttribute('loading', 'lazy');
+        a.appendChild(img);
+        li.appendChild(a);
+    } else {
+        const img = document.createElement('img');
+        img.src = artist.src;
+        img.setAttribute('loading', 'lazy');
+        li.appendChild(img);
+    }
+
+    popularArtistList.appendChild(li);
+});
+
+
 Array.from(document.getElementsByClassName("song-item")).forEach((e, i) => {
     e.getElementsByTagName("img")[0].src = songs[i].poster;
     e.getElementsByTagName("h4")[0].innerHTML = songs[i].songName;
@@ -145,7 +252,7 @@ masterPlay.addEventListener("click", () => {
         // masterPlay.classList.remove("bi-play-fill");
         // masterPlay.classList.add("bi-pause-fill");
         if(index<=10)
-            posterMasterPlay.src = `./Image/${index}.jpg`;
+            posterMasterPlay.src = `./Image/arijit/${index}.jpg`;
         else
             posterMasterPlay.src = `./Image/arijit/${index-10}.jpg`;
 
@@ -555,56 +662,57 @@ menu_list.addEventListener("click", () => {
 document.addEventListener("keydown", (event) => {
     const key = event.key;
     if (key === " ") {
-        // Space bar
-        if(music.paused || music.currentTime <= 0){
-        // playMusic();
-        // wave.classList.add("active-wave");
-        // masterPlay.classList.remove("bi-play-fill");
-        // masterPlay.classList.add("bi-pause-fill");
-        posterMasterPlay.src = `./Image/${index}.jpg`;
-        music.play();
-        masterPlay.classList.remove("bi-play-fill");
-        masterPlay.classList.add("bi-pause-fill");
+        if (music.paused || music.currentTime <= 0) {
+            // playMusic();
+            // wave.classList.add("active-wave");
+            // masterPlay.classList.remove("bi-play-fill");
+            // masterPlay.classList.add("bi-pause-fill");
+            if (index <= 10)
+                posterMasterPlay.src = `./Image/arijit/${index}.jpg`;
+            else posterMasterPlay.src = `./Image/arijit/${index - 10}.jpg`;
 
-        const a = document.createElement("p");
-        a.innerHTML = songs[index - 1].songName;
-        downloadBtn.href = `./Audio/${index}.mp3`;
-        downloadBtn.download = a.innerText;
+            music.play();
+            masterPlay.classList.remove("bi-play-fill");
+            masterPlay.classList.add("bi-pause-fill");
 
-        let songTitles = songs.filter((els) => {
-            return els.id == index;
-        });
-        songTitles.forEach((elss) => {
-            let { songName } = elss;
-            title.innerHTML = songName;
-        });
-        wave.classList.add("active-wave");
-        makeCurrectBG();
-        makeCurrentPlay();
-        Array.from(document.getElementsByClassName("song-item"))[
-            index - 1
-        ].style.background = "rgba(105,105,105,0.1)";
+            const a = document.createElement("p");
+            a.innerHTML = songs[index - 1].songName;
+            downloadBtn.href = `./Audio/${index}.mp3`;
+            downloadBtn.download = a.innerText;
 
-        Array.from(document.getElementsByClassName("playlistPlay"))[
-            index - 1
-        ].classList.add("bi-pause-circle-fill");
-        Array.from(document.getElementsByClassName("playlistPlay"))[
-            index - 1
-        ].classList.remove("bi-play-circle-fill");
-    }
-    else{
-        music.pause();
-        wave.classList.remove("active-wave");
-        masterPlay.classList.remove("bi-pause-fill");
-        masterPlay.classList.add("bi-play-fill");
+            let songTitles = songs.filter((els) => {
+                return els.id == index;
+            });
+            songTitles.forEach((elss) => {
+                let { songName } = elss;
+                title.innerHTML = songName;
+            });
+            wave.classList.add("active-wave");
+            makeCurrectBG();
+            makeCurrentPlay();
+            Array.from(document.getElementsByClassName("song-item"))[
+                index - 1
+            ].style.background = "rgba(105,105,105,0.1)";
 
-        Array.from(document.getElementsByClassName("playlistPlay"))[
-            index - 1
-        ].classList.add("bi-play-circle-fill");
-        Array.from(document.getElementsByClassName("playlistPlay"))[
-            index - 1
-        ].classList.remove("bi-pause-circle-fill");
-    }
+            Array.from(document.getElementsByClassName("playlistPlay"))[
+                index - 1
+            ].classList.add("bi-pause-circle-fill");
+            Array.from(document.getElementsByClassName("playlistPlay"))[
+                index - 1
+            ].classList.remove("bi-play-circle-fill");
+        } else {
+            music.pause();
+            wave.classList.remove("active-wave");
+            masterPlay.classList.remove("bi-pause-fill");
+            masterPlay.classList.add("bi-play-fill");
+
+            Array.from(document.getElementsByClassName("playlistPlay"))[
+                index - 1
+            ].classList.add("bi-play-circle-fill");
+            Array.from(document.getElementsByClassName("playlistPlay"))[
+                index - 1
+            ].classList.remove("bi-pause-circle-fill");
+        }
     } else if (key === "ArrowLeft") {
         index -= 1;
         if (index < 1) {

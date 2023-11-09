@@ -118,13 +118,13 @@
 
     .audio-controler .wave {
         position: absolute;
-        left: 28%;
+        left: 23%;
         top: -50px;
     }
     .audio-controler img {
         position: absolute;
         top: -50px;
-        left: 35%;
+        left: 29%;
     }
     .audio-controler .wave::before {
         content: "";
@@ -142,7 +142,7 @@
     .audio-controler #title {
         position: absolute;
         top: -50px;
-        left: 45%;
+        left: 38%;
     }
     .right-side-home-interface::before {
         top: 150px;
@@ -168,7 +168,7 @@
     .audio-controler img {
         position: absolute;
         top: -50px;
-        left: 28%;
+        left: 27%;
     }
     .audio-controler .wave::before {
         content: "";
@@ -186,20 +186,20 @@
     .audio-controler #title {
         position: absolute;
         top: -50px;
-        left: 40%;
+        left: 37%;
     }
 }
 
 @media (max-width: 320px) {
     .audio-controler .wave {
         position: absolute;
-        left: 16%;
+        left: 13%;
         top: -50px;
     }
     .audio-controler img {
         position: absolute;
         top: -50px;
-        left: 25%;
+        left: 23%;
     }
     .audio-controler .wave::before {
         content: "";
@@ -217,7 +217,7 @@
     .audio-controler #title {
         position: absolute;
         top: -50px;
-        left: 38%;
+        left: 37%;
     }
     /* .right-side-home-interface::before {
         top: 150px;

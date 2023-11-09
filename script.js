@@ -139,6 +139,111 @@ const songs = [
         poster: "./Image/hero.jpg",
     },
 ];
+
+//left side favorite song list
+const parentElement = document.querySelector('.left-side-songs-list');
+for (let i = 1; i <= 8; i++) {
+    const li = document.createElement('li');
+    li.className = 'song-item';
+
+    const p = document.createElement('p');
+    p.textContent = i.toString().padStart(2, '0');
+
+    const img = document.createElement('img');
+    img.src = '';
+    img.setAttribute('loading', 'lazy');
+
+    const h4 = document.createElement('h4');
+    h4.className = 'song-description';
+
+    const span = document.createElement('span');
+    span.textContent = 'Audio Artist';
+
+    const playIcon = document.createElement('i');
+    playIcon.className = 'bi bi-play-circle-fill playlistPlay';
+    playIcon.id = i.toString();
+
+    h4.appendChild(span);
+    li.appendChild(p);
+    li.appendChild(img);
+    li.appendChild(h4);
+    li.appendChild(playIcon);
+
+    parentElement.appendChild(li);
+}
+
+//home section popular song list dynamic code
+const popularSongList = document.querySelector('.popular-song-ul');
+// Define the number of songs you want to generate
+const numberOfSongs = 26;
+
+for (let i = 9; i <= numberOfSongs; i++) {
+    const li = document.createElement('li');
+    li.className = 'song-item';
+
+    const songPoster = document.createElement('div');
+    songPoster.className = 'song-poster';
+
+    const img = document.createElement('img');
+    img.src = '';
+    img.setAttribute('loading', 'lazy');
+
+    const playIcon = document.createElement('i');
+    playIcon.className = 'bi bi-play-circle-fill playlistPlay';
+    playIcon.id = i.toString();
+
+    songPoster.appendChild(img);
+    songPoster.appendChild(playIcon);
+
+    const h4 = document.createElement('h4');
+    h4.textContent = 'Audio Title';
+
+    li.appendChild(songPoster);
+    li.appendChild(h4);
+
+    popularSongList.appendChild(li);
+}
+
+//popular artist dynamic list
+artistData = [
+    { link: "./artist_arijitShing.html", src: "./Image/arijit.jpg" },
+    { link: "./", src: "./Image/anuv.png"},
+    { src: "./Image/alan.jpeg" },
+    { src: "./Image/katy.jpg" },
+    { src: "./Image/Charlie.webp" },
+    { src: "./Image/anupam.jpg" },
+    { src: "./Image/vishal.jpg" },
+    { src: "./Image/taylor.jpg" },
+    { src: "./Image/papon.jpg" },
+    { src: "./Image/ed.jpg" },
+    { src: "./Image/hardy.jpg" },
+    { src: "./Image/atif.webp" },
+    { src: "./Image/neha.jpg" },
+    { src: "./Image/snake.jpg" },
+];
+// Get the parent element where you want to insert the list
+const popularArtistList = document.querySelector(".popular-artist-ul");
+artistData.forEach((artist, index) => {
+    const li = document.createElement('li');
+
+    if (artist.link) {
+        const a = document.createElement('a');
+        a.href = artist.link;
+        const img = document.createElement('img');
+        img.src = artist.src;
+        img.setAttribute('loading', 'lazy');
+        a.appendChild(img);
+        li.appendChild(a);
+    } else {
+        const img = document.createElement('img');
+        img.src = artist.src;
+        img.setAttribute('loading', 'lazy');
+        li.appendChild(img);
+    }
+
+    popularArtistList.appendChild(li);
+});
+
 Array.from(document.getElementsByClassName('song-item')).forEach((e, i) => {
     e.getElementsByTagName('img')[0].src = songs[i].poster;
     e.getElementsByTagName('h4')[0].innerHTML = songs[i].songName;
