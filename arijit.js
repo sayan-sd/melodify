@@ -525,6 +525,7 @@ music.addEventListener("ended", () => {
 
         case "shuffle":
             index = Math.floor(Math.random() * songs.length + 1);
+            playMusic();
             break;
     }
 

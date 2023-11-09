@@ -12,6 +12,9 @@
     .right-side-home-interface {
         width: 100%;
     }
+    .audio-controler .main-controler .time-controler .audio-controler-range p {
+        margin: 0 7px;
+    }
 }
 
 @media (max-width: 780px) {
@@ -20,9 +23,6 @@
     }
     .left-side-bar {
         width: 60%;
-    }
-    .audio-controler .main-controler .time-controler .audio-controler-range p {
-        margin: 0 7px;
     }
     .right-side-home-interface::before {
         margin-left: 40px;

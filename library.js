@@ -524,7 +524,14 @@ music.addEventListener("ended", () => {
                 Array.from(document.getElementsByClassName("song-item")).length
             ) {
                 index = 1;
-            } else index++;
+            } 
+            else{
+                if(index == "hero"){
+                    index = 1;
+                }
+                else
+                    index++;
+            }
             playMusic();
             break;
 
@@ -534,6 +541,7 @@ music.addEventListener("ended", () => {
 
         case "shuffle":
             index = Math.floor(Math.random() * songs.length + 1);
+            playMusic();
             break;
     }
 
