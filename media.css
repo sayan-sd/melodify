@@ -1,0 +1,220 @@
+@media (max-width: 1080px) {
+    .left-side-bar {
+        position: absolute;
+        z-index: 999;
+        width: 40%;
+        transition: 1s linear;
+        background: #0b1320;
+    }
+    .left-side-bar-active {
+        transform: translateX(-100%);
+    }
+    .right-side-home-interface {
+        width: 100%;
+    }
+}
+
+@media (max-width: 780px) {
+    .audio-controler .volume-controler {
+        display: none;
+    }
+    .left-side-bar {
+        width: 60%;
+    }
+    .audio-controler .main-controler .time-controler .audio-controler-range p {
+        margin: 0 7px;
+    }
+    .right-side-home-interface::before {
+        margin-left: 40px;
+        height: 100%;
+        position: absolute;
+        top: 80px;
+    }
+}
+@media (max-width: 680px) {
+    .audio-controler {
+        position: relative;
+        z-index: 98;
+    }
+    .audio-controler .wave {
+        position: absolute;
+        left: 36%;
+        top: -50px;
+    }
+    .audio-controler img {
+        position: absolute;
+        top: -50px;
+        left: 41%;
+    }
+    .audio-controler .wave::before {
+        content: "";
+        position: absolute;
+        width: 240px;
+        height: 90px;
+        background: #111727;
+        /* border: 1px solid white; */
+        z-index: -1;
+        top: -38px;
+        left: -50%;
+        border-radius: 50% 50% 0 0;
+        box-shadow: 0 -11px 20px -17px #000;
+    }
+    .audio-controler #title {
+        position: absolute;
+        top: -50px;
+        left: 49%;
+    }
+    .audio-controler .main-controler {
+        width: 100%;
+    }
+    right-side-home-interface::before {
+        top: 100px;
+    }
+}
+
+@media (max-width: 620px) {
+    .right-side-home-interface nav {
+        width: 97%;
+    }
+    .right-side-home-interface nav ul li {
+        margin-right: 10px;
+    }
+    .left-side-bar {
+        width: 80%;
+    }
+}
+.bi-list {
+    display: none;
+    font-size: 22px;
+    font-weight: normal;
+    margin-left: 10px;
+}
+
+@media (max-width: 500px) {
+    .bi-list {
+        display: block;
+    }
+    .right-side-home-interface nav ul {
+        position: absolute;
+        flex-direction: column;
+        top: 90%;
+        align-items: start;
+        gap: 20px;
+        margin-left: 8px;
+        /* border: 1px solid white; */
+        width: 240px;
+        padding: 15px;
+        background: #111727;
+        box-shadow: black 0px 1px 4px;
+        border-radius: 10px;
+        transition: 0.5s linear;
+    }
+    .right-side-home-interface_nav_ul {
+        transform: translateX(-120%);
+    }
+    .right-side-home-interface nav .search-box {
+        width: 65%;
+    }
+
+    .audio-controler .wave {
+        position: absolute;
+        left: 30%;
+        top: -50px;
+    }
+    .audio-controler img {
+        position: absolute;
+        top: -50px;
+        left: 36%;
+    }
+    .audio-controler .wave::before {
+        content: "";
+        position: absolute;
+        width: 240px;
+        height: 90px;
+        background: #111727;
+        /* border: 1px solid white; */
+        z-index: -1;
+        top: -38px;
+        left: -50%;
+        border-radius: 50% 50% 0 0;
+        box-shadow: 0 -11px 20px -17px #000;
+    }
+    .audio-controler #title {
+        position: absolute;
+        top: -50px;
+        left: 44.5%;
+    }
+    .right-side-home-interface::before {
+        top: 150px;
+        /* width: 100%; */
+    }
+    .audio-controler .main-controler {
+        margin: 0;
+        margin-left: 0px;
+    }
+    .left-side-bar {
+        width: 90%;
+    }
+}
+
+@media (max-width: 400px) {
+    .audio-controler .wave {
+        position: absolute;
+        left: 22%;
+        top: -50px;
+    }
+    .audio-controler img {
+        position: absolute;
+        top: -50px;
+        left: 30%;
+    }
+    .audio-controler .wave::before {
+        content: "";
+        position: absolute;
+        width: 240px;
+        height: 90px;
+        background: #111727;
+        /* border: 1px solid white; */
+        z-index: -1;
+        top: -38px;
+        left: -50%;
+        border-radius: 50% 50% 0 0;
+        box-shadow: 0 -11px 20px -17px #000;
+    }
+    .audio-controler #title {
+        position: absolute;
+        top: -50px;
+        left: 40%;
+    }
+}
+
+@media (max-width: 320px) {
+    .audio-controler .wave {
+        position: absolute;
+        left: 16%;
+        top: -50px;
+    }
+    .audio-controler img {
+        position: absolute;
+        top: -50px;
+        left: 25%;
+    }
+    .audio-controler .wave::before {
+        content: "";
+        position: absolute;
+        width: 240px;
+        height: 90px;
+        background: #111727;
+        /* border: 1px solid white; */
+        z-index: -1;
+        top: -38px;
+        left: -50%;
+        border-radius: 50% 50% 0 0;
+        box-shadow: 0 -11px 20px -17px #000;
+    }
+    .audio-controler #title {
+        position: absolute;
+        top: -50px;
+        left: 38%;
+    }
+}

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melodify - Your Soundtrack to Life</title>
+
+    <!-- link fevricon  -->
+    <link rel="shortcut icon" href="./Image/Logo/logo-icon.png" type="image/x-icon">
+
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- bootstrap icon cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- link external css file -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="media.css">
+
+    <style>
+        .right-side-home-interface::before{
+            content: "";
+            background: url('./Image/library/library_bg.png');
+            margin-top: 15px;
+            background-size: contain;
+            width: 100%;
+            margin-left: 30px;
+            height: 300px;
+            background-repeat: no-repeat;
+            position: absolute;
+            overflow: hidden;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="app">
+            <!-- left side bar -->
+            <div class="left-side-bar left-side-bar-active">
+                <!-- brand name and logo  -->
+                <div class="brand-name-logo">
+                        <h1>MELODIFY</h1>
+                        <img src="./Image/Logo/logo-icon.png" width="46px" height="">
+                    </div>
+
+                <!-- choose option - 3 -->
+                <div class="audio-playlist">
+                    <div class="playlist">
+                        <h3 class="active"><span></span><i class="bi bi-music-note-beamed"></i>Favourite</h3>
+                        <h3><span></span><i class="bi bi-music-note-beamed"></i>Playlists</h3>
+                        <h3><span></span><i class="bi bi-music-note-beamed"></i>Recommended</h3>
+                    </div>
+                    <div class="playlist"></div>
+                    <div class="playlist"></div>
+                </div>
+
+                <!-- song list  -->
+                <ul class="left-side-songs-list">
+                    <li class="song-item">
+                        <p>01</p>
+                        <img src="" loading="lazy">
+                        <h4 class="song-description">Audio Title <br><span>Audio Artist</span></h4>
+                        <i class="bi bi-play-circle-fill playlistPlay" id="1"></i>
+                    </li>
+
+                    <li class="song-item">
+                        <p>02</p>
+                        <img src="" loading="lazy">
+                        <h4 class="song-description">Audio Title<br><span>Audio Artist</span></h4>
+                        <i class="bi bi-play-circle-fill playlistPlay" id="2"></i>
+                    </li>
+
+                    <li class="song-item">
+                        <p>03</p>
+                        <img src="" loading="lazy">
+                        <h4>Audio Title<br><span>Audio Artist</span></h4>
+                        <i class="bi bi-play-circle-fill playlistPlay" id="3"></i>
+                    </li>
+
+                    <li class="song-item">
+                        <p>04</p>
+                        <img src="" loading="lazy">
+                        <h4 class="song-description">Audio Title<br><span>Audio Artist</span></h4>
+                        <i class="bi bi-play-circle-fill playlistPlay" id="4"></i>
+                    </li>
+
+                    <li class="song-item">
+                        <p>05</p>
+                        <img src="" loading="lazy">
+                        <h4 class="song-description">Audio Title<br><span>Audio Artist</span></h4>
+                        <i class="bi bi-play-circle-fill playlistPlay" id="5"></i>
+                    </li>
+
+                    <li class="song-item">
+                        <p>06</p>
+                        <img src="" loading="lazy">
+                        <h4 class="song-description">Audio Title<br><span>Audio Artist</span></h4>
+                        <i class="bi bi-play-circle-fill playlistPlay" id="6"></i>
+                    </li>
+
+                    <li class="song-item">
+                        <p>07</p>
+                        <img src="" loading="lazy">
+                        <h4 class="song-description">Audio Title<br><span>Audio Artist</span></h4>
+                        <i class="bi bi-play-circle-fill playlistPlay" id="7"></i>
+                    </li>
+
+                    <li class="song-item">
+                        <p>08</p>
+                        <img src="" loading="lazy">
+                        <h4 class="song-description">Audio Title<br><span>Audio Artist</span></h4>
+                        <i class="bi bi-play-circle-fill playlistPlay" id="8"></i>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- home screen -->
+            <div class="right-side-home-interface">
+                <!-- navigation bar  -->
+                <nav>
+                    <i class="bi bi-list" id="menu-list"></i>
+                    <ul id="nav-ul" class="right-side-home-interface_nav_ul">
+                        <li><a href="./index.html" style="all:unset">Discover <span></span></a></li>
+                        <li class="active-nav">My Library <span></span></li>
+                        <li>Radio <span></span></li>
+                    </ul>
+
+                    <div class="search-box">
+                        <input type="text" placeholder="Search your Soundtrack to Life" id="search">
+                        <i class="bi bi-search"></i>
+                        <div class="search-result">
+                            
+                        </div>
+                    </div>
+
+                    <img src="./Image/Logo/user-img.jpg" loading="lazy" class="profile-img">
+                </nav>
+
+                <!-- hero section  -->
+                <div class="hero-section">
+                    <h2>Do Pal - Veer Zara</h2>
+                    <p>Maine Tumahre Zindagi Ke Do Pal Apne Pass Rakh Liye Hai <br>Aur Apne Zindagi Ke Do Pal Tumhe De Diye. Abh Yeh Hi Do Pal <br>Hamaari Nishaani Hai Aur Yeh Hi Humaari Kahaani Bhi.</p>
+                    <div class="hero-section-btn">
+                        <button hero-section-playBtn>PLAY</button>
+                        <button>FOLLOW</button>
+                    </div>
+                </div>
+
+                <!-- popular songs list  -->
+                <div class="pupular-songs-list">
+                    <div class="heading">
+                        <h4>Popular Songs</h4>
+                        <div class="icon">
+                            <div class="icon-bg">
+                                <i class="bi bi-caret-left-fill" id="popular-song-switch-left-btn"></i>
+                            </div>
+                            <div class="icon-bg">
+                                <i class="bi bi-caret-right-fill" id="popular-song-switch-right-btn"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <ul class="popular-song-ul">
+                        <li class="song-item">
+                            <div class="song-poster">
+                                <img src="" loading="lazy">
+                                <i class="bi bi-play-circle-fill playlistPlay" id="9"></i>
+                            </div>
+                            <h4>Audio Title<br><span>Audio Artist</span></h4>
+                        </li>
+
+                        <li class="song-item">
+                            <div class="song-poster">
+                                <img src="" loading="lazy">
+                                <i class="bi bi-play-circle-fill playlistPlay" id="10"></i>
+                            </div>
+                            <h4 class="song-description">Audio Title<br><span>Audio Artist</span></h4>
+                        </li>
+
+                        <li class="song-item">
+                            <div class="song-poster">
+                                <img src="" loading="lazy">
+                                <i class="bi bi-play-circle-fill playlistPlay" id="11"></i>
+                            </div>
+                            <h4 class="song-description">Audio Title<br><span>Audio Artist</span></h4>
+                        </li>
+
+                        <li class="song-item">
+                            <div class="song-poster">
+                                <img src="" loading="lazy">
+                                <i class="bi bi-play-circle-fill playlistPlay" id="12"></i>
+                            </div>
+                            <h4 class="song-description">Audio Title<br><span>Audio Artist</span></h4>
+                        </li>
+
+                        <li class="song-item">
+                            <div class="song-poster">
+                                <img src="" loading="lazy">
+                                <i class="bi bi-play-circle-fill playlistPlay" id="13"></i>
+                            </div>
+                            <h4 class="song-description">Audio Title<br><span>Audio Artist</span></h4>
+                        </li>
+
+                        <li class="song-item">
+                            <div class="song-poster">
+                                <img src="" loading="lazy">
+                                <i class="bi bi-play-circle-fill playlistPlay" id="14"></i>
+                            </div>
+                            <h4 class="song-description">Audio Title<br><span>Audio Artist</span></h4>
+                        </li>
+
+                        <li class="song-item">
+                            <div class="song-poster">
+                                <img src="" loading="lazy">
+                                <i class="bi bi-play-circle-fill playlistPlay" id="15"></i>
+                            </div>
+                            <h4 class="song-description">Audio Title<br><span>Audio Artist</span></h4>
+                        </li>
+
+                        <li class="song-item">
+                            <div class="song-poster">
+                                <img src="" loading="lazy">
+                                <i class="bi bi-play-circle-fill playlistPlay" id="16"></i>
+                            </div>
+                            <h4 class="song-description">Audio Title<br><span>Audio Artist</span></h4>
+                        </li>
+
+                        <li class="song-item">
+                            <div class="song-poster">
+                                <img src="" loading="lazy">
+                                <i class="bi bi-play-circle-fill playlistPlay" id="17"></i>
+                            </div>
+                            <h4 class="song-description">Audio Title<br><span>Audio Artist</span></h4>
+                        </li>
+
+                        <li class="song-item">
+                            <div class="song-poster">
+                                <img src="" loading="lazy">
+                                <i class="bi bi-play-circle-fill playlistPlay" id="18"></i>
+                            </div>
+                            <h4 class="song-description">Audio Title<br><span>Audio Artist</span></h4>
+                        </li>
+
+                        <li class="song-item">
+                            <div class="song-poster">
+                                <img src="" loading="lazy">
+                                <i class="bi bi-play-circle-fill playlistPlay" id="19"></i>
+                            </div>
+                            <h4 class="song-description">Audio Title<br><span>Audio Artist</span></h4>
+                        </li>
+
+                        <li class="song-item">
+                            <div class="song-poster">
+                                <img src="" loading="lazy">
+                                <i class="bi bi-play-circle-fill playlistPlay" id="20"></i>
+                            </div>
+                            <h4 class="song-description">Audio Title<br><span>Audio Artist</span></h4>
+                        </li>
+                        <li class="song-item">
+                            <div class="song-poster">
+                                <img src="" loading="lazy">
+                                <i class="bi bi-play-circle-fill playlistPlay" id="21"></i>
+                            </div>
+                            <h4 class="song-description">Audio Title<br><span>Audio Artist</span></h4>
+                        </li>
+                        <li class="song-item">
+                            <div class="song-poster">
+                                <img src="" loading="lazy">
+                                <i class="bi bi-play-circle-fill playlistPlay" id="22"></i>
+                            </div>
+                            <h4 class="song-description">Audio Title<br><span>Audio Artist</span></h4>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- popular artist list  -->
+                <div class="popular-artist">
+                    <div class="artist-heading">
+                        <h4>Popular Artists</h4>
+                        <div class="icon">
+                            <div class="icon-bg">
+                                <i class="bi bi-caret-left-fill" id="popular-artist-switch-left"></i>
+                            </div>
+                            <div class="icon-bg">
+                                <i class="bi bi-caret-right-fill" id="popular-artist-switch-right"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- imges  -->
+                    <ul class="popular-artist-ul">
+                        <li>
+                            <a href="./artist_arijitShing.html"><img src="./Image/arijit.jpg" loading="lazy"></a>
+                        </li>
+                        <li>
+                            <img src="./Image/anuv.png" loading="lazy">
+                        </li>
+                        <li>
+                            <img src="./Image/alan.jpeg" loading="lazy">
+                        </li> 
+                        <li>
+                            <img src="./Image/katy.jpg" loading="lazy">
+                        </li>
+                        <li>
+                            <img src="./Image/Charlie.webp" loading="lazy">
+                        </li>
+                        <li>
+                            <img src="./Image/anupam.jpg" loading="lazy">
+                        </li>
+                        <li>
+                            <img src="./Image/vishal.jpg" loading="lazy"></li>
+                        <li>
+                            <img src="./Image/taylor.jpg" loading="lazy">
+                        </li>
+                        <li>
+                            <img src="./Image/papon.jpg" loading="lazy">
+                        </li>
+                        <li>
+                            <img src="./Image/ed.jpg" loading="lazy">
+                        </li>
+                        <li>
+                            <img src="./Image/hardy.jpg" loading="lazy">
+                        </li>
+                        <li>
+                            <img src="./Image/atif.webp" loading="lazy">
+                        </li>
+                        <li>
+                            <img src="./Image/neha.jpg" loading="lazy">
+                        </li>
+                        <li>
+                            <img src="./Image/snake.jpg" loading="lazy">
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- audio-controler -->
+            <div class="audio-controler">
+                <div class="wave">
+                    <div class="wave-child"></div>
+                    <div class="wave-child"></div>
+                    <div class="wave-child"></div>
+                </div>
+                <img src="./Image/master-play-bg.png" master-play-poster>
+                <h4 id="title"><br><span></span></h4>
+
+                <div class="main-controler">
+                    <div class="controler-icon-pack1">
+                        <i class="bi bi-music-note-beamed" id="shuffle"></i>
+                        <i class="bi bi-music-note-list" id="get-sidebar"></i>
+                    </div>
+
+                    <div class="time-controler">
+                        <div class="audio-controler-icons">
+                            <i class="bi bi-skip-start-fill" id="previous-track"></i>
+                            <i class="bi bi-play-fill" id="audio-play"></i>
+                            <i class="bi bi-skip-end-fill" id="next-track"></i>
+                        </div>
+                        <div class="audio-controler-range">
+                            <p currentSongStart>0:00</p>
+                            <div class="time-bar">
+                                <input type="range" name="" id="seek" min="0" max="100" value="0">
+                                <div class="bar2" id="bar2"></div>
+                                <div class="dot" id="dot"></div>
+                            </div>
+                            <p currentSongEnd>0:00</p>
+                        </div>
+                    </div>
+
+                    <a href="" id="download-btn" download="">
+                        <i class="bi bi-cloud-arrow-down-fill download-btn"></i>
+                    </a>
+                </div>
+
+                <div class="volume-controler">
+                    <i class="bi bi-volume-up-fill" volume-icon></i>
+                    <div class="volume-bar">
+                        <input type="range" name="" id="vol-seek" min="0" max="100">
+                        <div class="vol-bar"></div>
+                        <div class="vol-dot"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- link external java script file -->
+    <script src="./library.js"></script>
+
+</body>
+</html>
