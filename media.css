@@ -146,8 +146,8 @@
     }
     .right-side-home-interface::before {
         top: 150px;
-        width: 200%;
-        right: -13%;
+        width: 170%;
+        right: -20%;
         top: 10%;
     }
     .audio-controler .main-controler {
